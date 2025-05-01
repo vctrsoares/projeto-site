@@ -97,17 +97,67 @@ section {
                     border: 2px solid #791fd3;
                     background-color: #beff1b;
                     color: #000;
+                    font-weight: bold;
                     cursor: pointer;
                 }
             }
         }
     }
-}
+   
+    .arrows {
+        width: 70vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -25px);
+        display: flex;
+        justify-content: space-between;
 
-.arrows {
-    & button {
-        & img{
-            width: 100px;
+        & button:nth-child(1); {  /*não funcionou, preciso da svg ou ajustar a png */
+            & img {
+                transform: scale(-1);
+            }
+        }
+
+        & button {
+            & img{
+                width: 100px;
+            }
+        }
+    }
+
+    .indicators {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 200px;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap: 15px;
+
+        & .number {
+            font-size: 5em;
+        }
+
+        & ul {
+            display: flex;
+            gap: 10px;
+
+            & li {
+                width: 50px;
+                height: 5px;
+                background-color: #beff1b;
+                border-radius: 5px;
+                transition: 0.5s;
+            }
+
+            & .active {
+                background-color: #fff;
+            }
         }
     }
 }
+
