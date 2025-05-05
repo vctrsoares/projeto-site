@@ -114,7 +114,6 @@ section {
                     color: #000;
                     font-weight: bold;
                     cursor: pointer;
-                    font-family: "Poppins", sans-serif;
                 }
             }
         }
@@ -232,6 +231,18 @@ section {
                     transition-delay: 0.3s;
                     opacity: 0;
                 }
+
+                & h2 {
+                    transition-delay: 0.5s;
+                }
+
+                & .description {
+                    transition-delay: 0.7s;
+                }
+
+                & .information {
+                    transition-delay: 0.9s;
+                }
             }
         }
 
@@ -256,6 +267,7 @@ section {
                     transform: translateX(0);
                     opacity: 1;
                 }
+                
             }
         }
     }
